@@ -7,7 +7,7 @@ import Phu.TrinhDoLaiXe;
 
 import java.util.Scanner;
 
-public class LaiXe extends Nguoi {
+public class LaiXe extends Nguoi implements Comparable<LaiXe> {
 
     private static int AUTO_ID = 10000;
     private String maLaiXe;
@@ -53,6 +53,7 @@ public class LaiXe extends Nguoi {
 
     @Override
     public void inputInfo() {
+        super.nhapThongTin();
         this.nhapTrinhDoLaiXe();
     }
 
@@ -81,41 +82,45 @@ public class LaiXe extends Nguoi {
         } while (true);
         switch (trinhDo) {
             case 1:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HạngA1.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HạngA1);
                 break;
             case 2:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangA2.HangA2.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangA2);
                 break;
             case 3:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangA3.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangA3);
                 break;
             case 4:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangA4.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangA4);
                 break;
             case 5:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangB1.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangB1);
                 break;
             case 6:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangB2.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangB2);
                 break;
             case 7:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangC.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangC);
                 break;
             case 8:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangD.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangD);
                 break;
             case 9:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangE.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangE);
                 break;
             case 10:
-                this.setTrinhdolaixe(TrinhDoLaiXe.valueOf(TrinhDoLaiXe.HangF.value));
+                this.setTrinhdolaixe(TrinhDoLaiXe.HangF);
                 break;
 
         }
     }
 
+    @Override
+    public int compareTo(LaiXe o) {
+        return this.ten.compareTo(o.getTen());
 
 
+    }
 
 //    @Override
 //    public int compareTo(LaiXe o) {

@@ -36,4 +36,18 @@ public class BangPhanCong {
 		return "BangPhanCong [laixe=" + laixe + ", bangPhanCongChiTiet=" + Arrays.toString(bangPhanCongChiTiet) + "]";
 	}
 
+	public int kiemTraTongSoLuot(BangPhanCongChiTiet[] bangPhanCongChiTiets) {
+		int tong = 0;
+		for (int i = 0; i < bangPhanCongChiTiets.length; i++) {
+			tong = tong + bangPhanCongChiTiets[i].getSoLuong();
+		}
+		return tong;
+//		if(tong>15) {
+//			return false;
+//		}
+//
+//		return true;
+//	}
+
+	}
 }

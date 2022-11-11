@@ -41,6 +41,9 @@ public class MainRun {
 					}
                     break;
                 case 6:
+                    QuanLyBangPhanCong.sapXepTen();
+
+
 
                     break;
                 case 7:

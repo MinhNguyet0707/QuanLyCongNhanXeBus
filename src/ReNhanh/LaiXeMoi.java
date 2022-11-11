@@ -20,7 +20,7 @@ public class LaiXeMoi {
         int soLaiXeMoi = new Scanner(System.in).nextInt();
         for (int i = 0; i < soLaiXeMoi; i++) {
             LaiXe laixe = new LaiXe();
-            laixe.nhapThongTin();
+            laixe.inputInfo();
             saveLaiXe(laixe);
         }
     }
